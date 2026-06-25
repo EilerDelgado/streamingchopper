@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Scroll suave global ────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Reset de márgenes ──────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0c0a1f;
+  background-image: 
+    linear-gradient(rgba(12, 10, 31, 0.93), rgba(12, 10, 31, 0.93)), 
+    url('./assets/los-mejores-posters-de-películas-1024x640.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ── Custom scrollbar (dark) ────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0a1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c276d;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a3293;
+}
+
+/* ── Keyframe Animations ────────────────────────────────────────── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(74, 50, 147, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(74, 50, 147, 0.6);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ── Glassmorphism utility ──────────────────────────────────────── */
+.glass {
+  background: rgba(12, 10, 31, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(74, 50, 147, 0.15);
+}
+
+.glass-strong {
+  background: rgba(12, 10, 31, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(74, 50, 147, 0.2);
+}
+
+/* ── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for children */
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+.reveal-delay-5 {
+  transition-delay: 0.5s;
+}
+
+.reveal-delay-6 {
+  transition-delay: 0.6s;
+}
+
+/* ── Dot pattern background ─────────────────────────────────────── */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(74, 50, 147, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Cart pattern background (repeating carts) ──────────────────── */
+.cart-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.012)' stroke-width='1'%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3E%3Ccircle cx='9' cy='21' r='1' fill='rgba(255,255,255,0.012)'/%3E%3Ccircle cx='20' cy='21' r='1' fill='rgba(255,255,255,0.012)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* ── Shimmer border effect ──────────────────────────────────────── */
+.shimmer-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(124, 107, 194, 0.6) 50%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Card hover glow ────────────────────────────────────────────── */
+.card-glow {
+  transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 8px 32px rgba(74, 50, 147, 0.2);
+  transform: translateY(-4px);
+}
