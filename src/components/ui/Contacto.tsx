@@ -44,9 +44,14 @@ export default function Contacto() {
               <Clock className="w-4 h-4" />
               Todos los días · 8am – 10pm
             </span>
-            <a href="#" className="flex items-center gap-2 hover:text-brand-400 transition-colors">
+            <a 
+              href="https://www.instagram.com/streaming__chopper" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 hover:text-brand-400 transition-colors"
+            >
               <Instagram className="w-4 h-4" />
-              @streamingchopper
+              @streaming__chopper
             </a>
           </div>
         </div>
