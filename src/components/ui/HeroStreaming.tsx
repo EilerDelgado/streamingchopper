@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronRight, ShoppingCart, User } from 'lucide-react';
 import { CartItem } from '../../store/cartStore';
-import logoImg from '../../assets/perfil_chopper.png';
+import logoImg from '../../assets/new-logo-2-chopper.png';
 import netflixLogo from '../../assets/logos/netflix.svg';
 import disneyLogo from '../../assets/logos/disney.svg';
 import maxLogo from '../../assets/logos/max.svg';
