@@ -83,7 +83,6 @@ React
 
 Supabase
 ├── PostgreSQL
-├── PL/pgSQL
 └── Authentication
 
 Vercel
@@ -97,6 +96,7 @@ Vercel
 ```bash
 npm install
 npm run dev
+```
 
 ---
 
@@ -109,3 +109,6 @@ npm run dev
 ---
 
 Desarrollado por **Eiler Delgado**.
+
+
+Eiler Delgado**.
