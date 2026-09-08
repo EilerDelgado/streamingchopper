@@ -97,9 +97,6 @@ Vercel
 ```bash
 npm install
 npm run dev
-```
-
-Las variables de entorno necesarias están definidas en `.env.example`.
 
 ---
 
